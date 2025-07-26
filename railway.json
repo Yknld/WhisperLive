@@ -5,8 +5,6 @@
   },
   "deploy": {
     "startCommand": "python3 run_server.py --port $PORT --backend faster_whisper",
-    "healthcheckPath": "/",
-    "healthcheckTimeout": 100,
     "restartPolicyType": "always"
   }
 } 

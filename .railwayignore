@@ -1,0 +1,46 @@
+# Development files
+*.log
+server-startup.log
+whisperlive-debug.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment (use Railway's instead)
+venv/
+env/
+ENV/
+
+# Model cache (let Railway download fresh)
+*.pt
+*.bin
+models/
+.cache/
+
+# Development tools
+.git/
+.github/
+.vscode/
+.idea/
+
+# Documentation (keep only essential)
+docs/
+Audio-Transcription-Chrome/
+Audio-Transcription-Firefox/
+Audio-Transcription-iOS/
+
+# Test files
+tests/
+test_*.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local development scripts
+setup.py
+scripts/ 

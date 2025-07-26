@@ -65,11 +65,41 @@ Railway offers:
 
 ## 🔧 Troubleshooting
 
+### Common Issues:
+
+**1. WebSocket Health Check Errors**
+If you see `InvalidUpgrade: invalid Connection header: close` errors:
+- This is normal - Railway's health checks use HTTP, but WhisperLive is WebSocket-only
+- The server will still work for WebSocket connections
+- Health checks are disabled in our configuration to avoid false failures
+
+**2. Deployment Fails**
 If deployment fails:
-1. Check Railway logs in the dashboard
-2. Verify requirements.txt has all needed packages
-3. Ensure run_server.py accepts --port argument
-4. Contact Railway support for platform issues
+- Check Railway logs in the dashboard
+- Verify requirements.txt has all needed packages
+- Ensure run_server.py accepts --port argument
+- Try redeploying with "Force rebuild"
+
+**3. Model Download Issues**
+If models fail to download:
+- Railway has limited memory during build
+- The "small" model should work fine
+- Larger models may require Railway Pro plan
+
+**4. Connection Issues**
+If Church Translator can't connect:
+- Verify Railway URL is correct (https://your-app.railway.app)
+- Use WSS (secure WebSocket) not WS
+- Check Railway deployment logs for errors
+
+### Checking Logs
+```bash
+# In Railway dashboard:
+1. Go to your project
+2. Click "Deployments"
+3. Click on the latest deployment
+4. View logs to debug issues
+```
 
 ## 🎯 Next Steps
 
