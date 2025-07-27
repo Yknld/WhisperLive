@@ -1,1 +1,1 @@
-web: python3 run_server.py --port $PORT --backend faster_whisper 
+web: python3 run_server.py --port $PORT --backend faster_whisper --model medium 

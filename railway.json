@@ -4,7 +4,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "python3 run_server.py --port $PORT --backend faster_whisper",
+    "startCommand": "python3 run_server.py --port $PORT --backend faster_whisper --model medium",
     "restartPolicyType": "always"
   }
 } 
