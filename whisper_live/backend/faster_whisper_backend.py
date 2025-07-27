@@ -28,7 +28,7 @@ class ServeClientFasterWhisper(ServeClientBase):
         use_vad=True,
         single_model=False,
         send_last_n_segments=10,
-        no_speech_thresh=0.45,
+        no_speech_thresh=0.8,  # Increased from 0.45 to reduce hallucinations
         clip_audio=False,
         same_output_threshold=7,
         cache_path="~/.cache/whisper-live/",
