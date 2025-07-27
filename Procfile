@@ -1,1 +1,1 @@
-web: python3 run_server.py --port $PORT --backend faster_whisper --model medium 
+web: gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 300 whisper_api_server:app 

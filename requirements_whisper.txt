@@ -1,0 +1,8 @@
+openai-whisper
+flask
+werkzeug
+gunicorn
+numpy
+torch
+torchvision
+torchaudio 

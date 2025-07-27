@@ -4,7 +4,10 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "python3 run_server.py --port $PORT --backend faster_whisper --model medium",
+    "startCommand": "pip install -r requirements_whisper.txt && gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 300 whisper_api_server:app",
     "restartPolicyType": "always"
+  },
+  "variables": {
+    "WHISPER_MODEL": "medium"
   }
 } 
