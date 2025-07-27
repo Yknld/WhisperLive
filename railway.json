@@ -4,9 +4,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "python3 railway_wrapper.py",
-    "healthcheckPath": "/health",
-    "healthcheckTimeout": 30,
+    "startCommand": "python3 run_server.py --port $PORT --backend faster_whisper",
     "restartPolicyType": "always"
   }
 } 
